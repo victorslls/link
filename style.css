@@ -1,0 +1,147 @@
+
+*{
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter' sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  list-style: none;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(assets/back.png);
+  --strocker-color : rgba(255,255,255,0.5);
+  --surface-color: rgba(225,255,255, 0.1);
+  --surface-color-hover: rgba(255,255,255,0.05);
+  --switch-bf-url: url(assets/Switch.svg)
+
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(assets/bg.Light.png);
+  --strocker-color: rgba(0,0,0, 0.5);
+  --surface-color: rgba(0,0,0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02)
+  --switch-bf-url: url(assets/SwitchLight.svg)
+}
+
+body  {
+ background: var(--bg-url) no-repeat top center/cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto;
+  width: 360px;
+  height: 712px;
+  gap: 1rem;
+}
+
+.container .profile {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1px;
+
+}
+
+.container .profile .avatar {
+  width: 112px;
+  height: 111px;
+  border-radius: 9999px;
+  border: 1px var(--surface-color) solid ;
+  margin-bottom: 1rem;
+}
+
+.profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+.container .swithc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+}
+
+.light .switch-lua  {
+  display: none;
+}
+
+.dark .switch-sol {
+  display: none;
+}
+
+
+.container .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.container .links .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  padding: 1rem;
+  width: 355px;
+  border: 1px solid var(--strocker-color);
+  border-radius: 1rem;
+  background:var(--surface-color);
+  opacity: 1;
+  transition: background .2s;
+  
+}
+
+.container .links .link:hover{
+  background:var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+ .link .butom { 
+  text-decoration: none;
+  color: var(--text-color)
+}
+ 
+.container .social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+
+.social-links i:hover {
+  opacity: 0.5; transition:  .2s;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem;
+}
+
+.footer a:hover {
+  color: #a428e7;
+  transition: 2s;
+  cursor: pointer;
+}
+
+  
